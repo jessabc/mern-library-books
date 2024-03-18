@@ -20,8 +20,8 @@ A library app with two interfaces.
 
 ## Links
 
-- Solution URL: [Github](https://github.com/jessabc/mern-library)
-- Live Site URL: [My Library](https://mern-mylibrary.onrender.com)
+- Solution URL: [Github](https://github.com/jessabc/mern-library-books)
+
 
 
 ## My process
