@@ -126,7 +126,7 @@ export default function MembersDataTable({
 
     try {
       const response = await axios.patch(
-        `https://backend-url/api/admin/members/${id}`,
+        `${process.env.BACKEND_URL}/api/admin/members/${id}`,
         form,
         headers
       );
@@ -148,7 +148,7 @@ export default function MembersDataTable({
   const deleteMember = async (id: string) => {
     try {
       await axios.delete(
-        `https://backend-url/api/admin/members/${id}`,
+        `${process.env.BACKEND_URL}/api/admin/members/${id}`,
         headers
       );
       setMembers((prev) => prev.filter((member) => member._id != id));

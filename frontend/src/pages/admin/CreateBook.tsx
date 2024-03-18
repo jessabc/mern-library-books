@@ -65,7 +65,11 @@ const CreateBook = () => {
     };
 
     try {
-      await axios.post("https://backend-url/api/admin", formData, headers);
+      await axios.post(
+        `${process.env.BACKEND_URL}/api/admin`,
+        formData,
+        headers
+      );
       setSuccessfullyCreatedBookAlertOpen(true);
       setForm({
         cover: "",

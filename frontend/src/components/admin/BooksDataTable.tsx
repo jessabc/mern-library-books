@@ -163,7 +163,7 @@ export default function BooksDataTable({
     formData.append("summary", form.summary);
     try {
       const response = await axios.patch(
-        `https://backend-url/api/admin/${id}`,
+        `${process.env.BACKEND_URL}/api/admin/${id}`,
         formData,
         headers
       );
@@ -187,7 +187,7 @@ export default function BooksDataTable({
   const deleteBook = async (id: string) => {
     try {
       const response = await axios.delete(
-        `https://backend-url/api/admin/${id}`,
+        `${process.env.BACKEND_URL}/api/admin/${id}`,
         headers
       );
       dispatch({ type: "DELETE_BOOK", payload: response.data });

@@ -29,7 +29,7 @@ const Members = () => {
 
       try {
         const response = await axios.get(
-          "https://backend-url/api/admin/members",
+          `${process.env.BACKEND_URL}/api/admin/members`,
           headers
         );
         setMembers(response.data);

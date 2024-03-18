@@ -11,7 +11,7 @@ const app = express();
 
 // middleware
 const corsOptions = {
-  origin: "https://frontend-url.com",
+  origin: `${process.env.FRONTEND_URL}`,
 };
 
 app.use(express.json());

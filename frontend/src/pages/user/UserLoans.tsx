@@ -19,7 +19,7 @@ const UserLoans = () => {
 
       try {
         const response = await axios.get(
-          "https://backend-url/api/members/loans",
+          `${process.env.BACKEND_URL}/api/members/loans`,
           headers
         );
         dispatch({ type: "SET_LOANS", payload: response.data });

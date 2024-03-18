@@ -20,10 +20,13 @@ const UserLogin = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://backend-url/api/users/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.BACKEND_URL}/api/users/login`,
+        {
+          email,
+          password,
+        }
+      );
       dispatch({ type: "LOGIN", payload: response.data });
       localStorage.setItem("user", JSON.stringify(response.data));
       if (response.data.role === "admin") {

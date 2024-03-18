@@ -6,7 +6,7 @@ const useGetBooks = () => {
 
   const getBooks = async () => {
     try {
-      const response = await axios.get("https://backend-url/api/books");
+      const response = await axios.get(`${process.env.BACKEND_URL}/api/books`);
       dispatch({ type: "SET_BOOKS", payload: response.data });
       console.log(response.data);
     } catch (error) {
